@@ -4,115 +4,258 @@
  
  const questions = [
     {
-        question: " QUEL EST LA SIGNIFICATION APPROPRIÉ À L'EXPRESSION 'Dêmin-dêmin' ",
-        optionA: "manger à sa faim",
-        optionB: "se débrouille.",
-        optionC: "donner vie",
-        optionD: "parler trop",
+        question: "Quelle est la nation qui a remporté le plus grand nombre de titres de la CAN jusqu'à présent ?",
+        optionA: "Mali",
+        optionB: "Nigeria",
+        optionC: "Cameroun",
+        optionD: "Égypte",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "En quelle année la première Coupe d'Afrique des Nations a-t-elle eu lieu ?",
+        optionA: "1963",
+        optionB: "1957",
+        optionC: "1970",
+        optionD: "1952",
         correctOption: "optionB"
     },
 
     {
-        question: "MANGER ENSEMBLE",
-        optionA: "le coulé",
-        optionB: "gbayé dans gbêve",
-        optionC: "daba en gbonhï",
-        optionD: "fraya.",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "QUEL SIGNIFIE 'yé té couman de kélkéchoz'",
-        optionA: "parler en vaine",
-        optionB: "Prends la jambe",
-        optionC: "se débrouille",
-        optionD: "je te parle de quelque chose",
+        question: "Quel pays qui a accueilli la CAN 2019 ?",
+        optionA: "Cameroun",
+        optionB: "Afrique du Sud",
+        optionC: "Maroc",
+        optionD: "Égypte",
         correctOption: "optionD"
     },
 
     {
-        question: "MAISON",
-        optionA: "bori",
-        optionB: "jéton",
-        optionC: "pix",
-        optionD: "mousso",
+        question: "Quelle équipe a remporté la CAN 2021 ?",
+        optionA: "Maroc",
+        optionB: "Algérie",
+        optionC: "Sénégal",
+        optionD: "Tunisie",
         correctOption: "optionC"
     },
 
-    
     {
-        question: "AFFAIRAGE",
-        optionA: "Gawa",
-        optionB: "Zoo",
-        optionC: "Bori",
-        optionD: "Gbairai.",
+        question: "Combien d'équipes participent généralement à la phase finale de la CAN ?",
+        optionA: "16",
+        optionB: "20",
+        optionC: "32",
+        optionD: "24",
         correctOption: "optionD"
     },
-     
-    {
-        question: "AMOUREUX",
-        optionA: "Fraya",
-        optionB: "Beko",
-        optionC: "Fan",
-        optionD: "Apoutchou.",
-        correctOption: "optionC"
-    },
-
-    
 
     {
-        question: "COURIR",
-        optionA: "Behou",
-        optionB: "Chap chap",
-        optionC: "Gbor",
-        optionD: "Choco.",
+        question: "Quel pays a remporté la CAN pour la première fois en 1992 ?",
+        optionA: "Côte d'Ivoire",
+        optionB: "Ghana",
+        optionC: "Nigeria",
+        optionD: "Algérie",
         correctOption: "optionA"
     },
+
     {
-        question: "REFLECHIR",
-        optionA: "Gouman",
-        optionB: "Sciencé",
-        optionC: "Mousso",
-        optionD: "Fata.",
-        correctOption: "optionB"
-    }
-    ,
-    {
-        question: "IGNORANT",
-        optionA: "Fargot",
-        optionB: "Din din",
-        optionC: "Gahou",
-        optionD: "Gbé.",
+        question: "Quelle nation a accueilli la CAN pour la première fois en 1957 ?",
+        optionA: "Ghana",
+        optionB: "Égypte",
+        optionC: "Soudan",
+        optionD: "Éthiopie",
         correctOption: "optionC"
-    }
-    ,
+    },
+
     {
-        question: "BAHI",
-        optionA: "Chanceux",
-        optionB: "Malchanceux",
-        optionC: "Intelligent",
-        optionD: "Sage.",
-        correctOption: "optionB"
-    }
-    ,
+        question: "Quelle équipe nationale est surnommée \"les Éléphants\" et a remporté la CAN en 2015 ?",
+        optionA: "Côte d'Ivoire",
+        optionB: "Cameroun",
+        optionC: "Nigeria",
+        optionD: "Ghana",
+        correctOption: "optionA"
+    },
+
     {
-        question: "Zoo",
-        optionA: "Parc animalier",
-        optionB: "Forêt",
-        optionC: "Restaurant",
-        optionD: "Joli.",
+        question: "Qui est l'entraîneur actuel de l'équipe nationale du Maroc ?",
+        optionA: "Didier Deschamps",
+        optionB: "Badou Zaki",
+        optionC: "Hervé Renard",
+        optionD: "Vahid Halilhodži",
         correctOption: "optionD"
-    }
-    ,
+    },
+
     {
-        question: "SKINNY",
-        optionA: "Homme riche",
-        optionB: "Femme mince",
-        optionC: "Rapporter",
-        optionD: "Donner.",
+        question: "À partir de quelle année la CAN a-t-elle eu lieu tous les deux ans au lieu de quatre ans?",
+        optionA: "2010",
+        optionB: "2012",
+        optionC: "2002",
+        optionD: "2013",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "Quelle est la mascotte officielle de la CAN 2023 ?",
+        optionA: "Tut",
+        optionB: "Chuku Chuku",
+        optionC: "Akawba",
+        optionD: "Palanquinha",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "Combien de groupes y a-t-il généralement dans la phase de groupes de la CAN ?",
+        optionA: "6",
+        optionB: "8",
+        optionC: "10",
+        optionD: "7",
+        correctOption: "optionA"
+    },
+
+
+    {
+        question: "Quelle équipe détient le record du plus grand nombre de participations à la CAN sans avoir remporté le titre ?",
+        optionA: "Angola",
+        optionB: "Mali",
+        optionC: "Soudan",
+        optionD: "Gabon",
+        correctOption: "optionB"
+    },
+
+    {
+        question: "En quelle année a été introduite la phase de groupes dans le format de la CAN ?",
+        optionA: "1957",
+        optionB: "1964",
+        optionC: "2013",
+        optionD: "1992",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "Quelle équipe nationale est surnommée les \"Super Eagles\" ?",
+        optionA: "Nigeria",
+        optionB: "California",
+        optionC: "Burkina faso",
+        optionD: "Tanzanie",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "Quelle nation africaine a atteint les quarts de finale de la Coupe du Monde de la FIFA pour la première fois en 1990 ?",
+        optionA: "Guinée Équatoriale",
+        optionB: "Éthiopie",
+        optionC: "Cameroun",
+        optionD: "Afrique du sud",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "En quelle année l'Égypte a-t-elle accueillie la CAN pour la première fois ?",
+        optionA: "1959",
+        optionB: "2006",
+        optionC: "1986",
+        optionD: "1974",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "Quelle équipe a été finaliste de la CAN 2004, mais a perdu face à la Tunisie ?",
+        optionA: "Sénégal",
+        optionB: "Shining city",
+        optionC: "Maroc",
+        optionD: "Libye",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "Quel pays a organisé la CAN pour la première fois en 1962 ?",
+        optionA: "Égypte",
+        optionB: "Ghana",
+        optionC: "Soudan",
+        optionD: "Éthiopie",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "Quel joueur ivoirien a remporté le Ballon d'Or Africain en 2015 après avoir mené son équipe à la victoire en 2015 ?",
+        optionA: "Yaya Touré",
+        optionB: "Joel Tié",
+        optionC: "Kolo touré",
+        optionD: "Didier Drogba",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "Quel ancien international égyptien a été l'entraîneur de l'équipe nationale d'Égypte lors de la CAN 2008 ?",
+        optionA: "Mahmoud El-Gohary",
+        optionB: "Mohamed Salah",
+        optionC: "Ahmed Hassan",
+        optionD: "Hassan Shehata",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "Quel entraîneur a mené le Nigeria à la victoire lors de la CAN 1994, remportant ainsi son premier titre?",
+        optionA: "Paul Hamilton",
+        optionB: "Clemens Westerhof",
+        optionC: "Shaibu Amodu",
+        optionD: "Gottlieb Göller",
+        correctOption: "optionB"
+    },
+
+    {
+        question: "Qui était l'entraîneur de l'équipe du Sénégal lors de la CAN 2002, où ils ont atteint la finale pour la première fois?",
+        optionA: "Lamine N'Diaye",
+        optionB: "Bruno Metsu",
+        optionC: "Omar Daf",
+        optionD: "Mbaye Leye",
+        correctOption: "optionB"
+    },
+
+    {
+        question: "Qui était l'entraîneur de l'équipe nationale du Sénégal lors de la CAN 2019 remportée par l'Algérie ?",
+        optionA: "Clarence Seedorf",
+        optionB: "Aliou Cissé",
+        optionC: "Javier Aguirre",
+        optionD: "Hervé Renard",
+        correctOption: "optionB"
+    },
+
+    {
+        question: "Quel pays était dirigé par l'entraîneur Gernot Rohr lors de la CAN 2019 ?",
+        optionA: "Ghana",
+        optionB: "Maroc",
+        optionC: "Nigeria",
+        optionD: "Cameroun",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "Hervé Renard a remporté la CAN avec deux équipes différentes. lesquels  ?",
+        optionA: "Algérie et Tunisie",
+        optionB: "Égypte et Sénégal",
+        optionC: "Côte d'Ivoire et Maroc",
+        optionD: "Ghana et Nigeria",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "Qui était l'entraîneur de l'Égypte lors de la CAN 2017 ?",
+        optionA: "Javier Aguirre",
+        optionB: "Aliou Cissé",
+        optionC: "Hector Cuper",
+        optionD: "Hervé Renard",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "Quel pays était entraîné par Florent Ibenge lors de la CAN 2019 ?",
+        optionA: "Gabon",
+        optionB: "RDC (République démocratique du Congo)",
+        optionC: "Mali",
+        optionD: "Burkina Faso",
         correctOption: "optionB"
     }
-    
+
 
 
 ]
