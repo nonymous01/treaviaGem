@@ -1,94 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz</title>
-  <link rel="stylesheet" href="./index.css">
-</head>
-<body>
+<body onload="NextQuestion(0)">
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:ital@1&family=Lora:ital,wght@1,500&family=Poppins:wght@200;300&family=Roboto+Mono:wght@100&family=Tulpen+One&display=swap" rel="stylesheet">
+    </head>
+    <main>
+        <!-- creating a modal for when quiz ends -->
+        <div class="modal-container" id="score-modal">
 
-  <h1>Quiz</h1>
-  <div id="quiz-questions">
-    <p>Question 1: Quelle est la capitale de la France?</p>
-    <input type="radio" name="q1" value="paris" id="q1a"> <label for="q1a">Paris</label><br>
-    <input type="radio" name="q1" value="berlin" id="q1b"> <label for="q1b">Berlin</label><br>
-    <input type="radio" name="q1" value="londres" id="q1c"> <label for="q1c">Londres</label><br>
-    <input type="radio" name="q1" value="rome" id="q1d"> <label for="q1d">Rome</label><br>
-  </div>
-  
-  <p id="quiz-result"></p>
-  <button onclick="playQuiz()">Jouer au Quiz</button>
+            <div class="modal-content-container">
 
-  <script>
-    function playQuiz() {
-      // Vérifier si le cookie existe et si la date est aujourd'hui
-      if (getCookie("quizPlayed") === "true") {
-        // Vérifier si l'alerte n'a pas déjà été affichée
-        if (!getCookie("alertShown")) {
-          // Utiliser une alerte personnalisée avec la classe custom-alert
-          showAlert("Vous avez déjà joué au quiz aujourd'hui. Revenez demain !");
-          // Marquer le cookie pour indiquer que l'alerte a été affichée
-          setCookie("alertShown", "true", 1); // expire après 1 jour
-        }
-      } else {
-        // Logique du quiz ici...
-        var score = 0;
-  
-        // Obtenir la réponse sélectionnée
-        var selectedAnswer = document.querySelector('input[name="q1"]:checked');
-        
-        // Vérifier la réponse
-        if (selectedAnswer && selectedAnswer.value === "paris") {
-          score++;
-        }
-  
-        // Afficher le résultat
-        var resultMessage = "Votre score : " + score + "/1";
-        if (score === 1) {
-          resultMessage += " Bravo, vous avez répondu correctement à toutes les questions!";
-        } else {
-          resultMessage += " Merci d'avoir participé au quiz!";
-        }
-        document.getElementById("quiz-result").innerText = resultMessage;
-  
-        // Marquer le cookie pour indiquer que l'utilisateur a joué aujourd'hui
-        setCookie("quizPlayed", "true", 1); // expire après 1 jour
-      }
-    }
-  
-    // Fonction pour définir un cookie
-    function setCookie(name, value, days) {
-      var expires = "";
-      if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-      }
-      document.cookie = name + "=" + value + expires + "; path=/";
-    }
-  
-    // Fonction pour obtenir la valeur d'un cookie
-    function getCookie(name) {
-      var nameEQ = name + "=";
-      var ca = document.cookie.split(';');
-      for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-      }
-      return null;
-    }
-  
-    // Fonction pour afficher une alerte personnalisée
-    function showAlert(message) {
-      var alertContainer = document.createElement("div");
-      alertContainer.className = "custom-alert";
-      alertContainer.textContent = message;
-  
-      // Ajouter l'alerte à la fin du body
-      document.body.appendChild(alertContainer);
-    }
-  </script>
+                <h1>Félicitations, le questionnaire est terminé Rende-vous demain !.</h1>
+
+                <div class="grade-details">
+                    <p>Tentatives : 1</p>
+                    <p>Mauvaises réponses : <span id="wrong-answers"></span></p>
+                    <p>Les bonnes réponses : <span id="right-answers"></span></p>
+                    <p>Grade : <span id="grade-percentage"></span>%</p>
+                    <p ><span id="remarks"></span></p>
+                </div>
+
+                <div class="modal-button-container">
+                    <button onclick="closeScoreModal()">Continue</button>
+                </div>
+
+            </div>
+        </div>
+<!-- end of modal of quiz details-->
+
+        <div class="game-quiz-container">
+
+            <div class="game-details-container">
+                <h1>Score : <span id="player-score"></span> / 1</h1>
+                <h1> Question : <span id="question-number"></span> / 1</h1>
+            </div>
+
+            <div class="game-question-container" id="azer">
+                <h1 id="display-question"></h1>
+            </div>
+
+            <div class="game-options-container">
+
+               <div class="modal-container" id="option-modal">
+
+                    <div class="modal-content-container">
+                         <h1>Veuillez choisir une option</h1>
+
+                         <div class="modal-button-container">
+                            <button onclick="closeOptionModal()">Continue</button>
+                        </div>
+
+                    </div>
+
+               </div>
+
+                <span class="option123">
+                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                    <label for="option-one" class="option" id="option-one-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                    <label for="option-two" class="option" id="option-two-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                    <label for="option-three" class="option" id="option-three-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                    <label for="option-four" class="option" id="option-four-label"></label>
+                </span>
+
+
+            </div>
+
+            <div class="next-button-container">
+                <button onclick="handleNextQuestion()">Question Suivante</button>
+            </div>
+
+        </div>
+    </main>
+    <script src="index.js"></script>
 </body>
-</html>
+
