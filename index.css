@@ -243,7 +243,6 @@ input[type=radio]:checked~.option {
 
 .grade-details {
     width: 35rem;
-    background-color: #084d3c;
     height: 25rem;
     position: relative;
     bottom: 100px;
@@ -277,7 +276,7 @@ input[type=radio]:checked~.option {
     font-size: 2.9rem;
     cursor: pointer;
     border-radius: 20px;
-    
+
 }
 
 .modal-button-container button:hover {
